@@ -11,10 +11,10 @@ const MealController = {
 
     addAMeal(req, res) {
         const newMeal = req.body;
-        const createdMeal = MealService.addAMeal(newMeal);
+        const createdMeal = MealService.addMeal(newMeal);
         return res.json({
             status: 'success',
-            data: createdMeal
+            data: createdMeal,
         }).status(201);
     },
 
@@ -24,7 +24,7 @@ const MealController = {
         return res.json({
             status: 'success',
             data: foundMeal
-        }).status(201);
+        }).status(200);
     }
 };
 

@@ -6,17 +6,18 @@ const MealService = {
         const validMeals = dummyData.meals.map((meal) => {
             const newMeal = new Meal();
             newMeal.id = meal.id;
-            newMeal.name = meal.id;
+            newMeal.name = meal.name;
             newMeal.size = meal.size;
             newMeal.prize = meal.prize;
+            return newMeal;
         });
         return validMeals;
 
     },
 
-    addAMeal(meal) {
+    addMeal(meal) {
         const mealLength = dummyData.meals.length;
-        const lastId = dummyData.meals(mealLength - 1).id;
+        const lastId = dummyData.meals[mealLength - 1].id;
         const newId = lastId + 1;
         meal.id = newId;
         dummyData.meals.push(meal);
@@ -25,7 +26,7 @@ const MealService = {
     },
 
     getAMeal(id) {
-        const meal = dummyData.meals.find(meal => meal.id = id);
+        const meal = dummyData.meals.find(meal => meal.id == id);
         return meal || {};
 
     }
