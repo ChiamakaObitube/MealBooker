@@ -6,10 +6,26 @@ const MealController = {
         return res.json({
             status: 'success',
             data: allMeals
-        });
+        }).status(200);
     },
 
-    addMeal(req, res) {
+    addAMeal(req, res) {
         const newMeal = req.body;
+        const createdMeal = MealService.addAMeal(newMeal);
+        return res.json({
+            status: 'success',
+            data: createdMeal
+        }).status(201);
+    },
+
+    getSingleMeal(req, res) {
+        const id = req.params.id;
+        const foundMeal = MealService.getAMeal(id);
+        return res.json({
+            status: 'success',
+            data: foundMeal
+        }).status(201);
     }
-}
+};
+
+export default MealController
