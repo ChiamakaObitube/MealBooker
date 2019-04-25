@@ -1,0 +1,32 @@
+{
+    "name": "meal-booker-app",
+    "version": "1.0.0",
+    "description": "Meal Booker Application",
+    "main": "index.js",
+    "dependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/node": "^7.2.2",
+        "@babel/preset-env": "^7.4.3",
+        "babel-cli": "^6.26.0",
+        "express": "^4.16.4"
+    },
+    "devDependencies": {
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint": "^5.16.0",
+        "nodemon": "^1.18.11"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start-dev": "nodemon --exec babel-node index"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ChiamakaObitube/MealBooker.git"
+    },
+    "author": "Chiamaka",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ChiamakaObitube/MealBooker/issues"
+    },
+    "homepage": "https://github.com/ChiamakaObitube/MealBooker#readme"
+}
