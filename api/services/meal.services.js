@@ -14,7 +14,7 @@ const MealService = {
 
     },
 
-    addMeal(meal) {
+    addAMeal(meal) {
         const mealLength = dummyData.meals.length;
         const lastId = dummyData.meals(mealLength - 1).id;
         const newId = lastId + 1;
